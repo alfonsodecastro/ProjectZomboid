@@ -948,6 +948,8 @@ local function notValid(prof, skill)
 		end
 		return notvalid
 	end
+	-- Profesión desconocida, por defecto vale para todo o no sube en nada
+	return false
 end
 
 local function getBoost(prof, inv)
@@ -1149,6 +1151,8 @@ local function getBoost(prof, inv)
 	if prof == "ammospecialist" then
 		return _boost
 	end
+	-- profesión desconocida, no aplicamos boost
+	return 0
 end
 
 local function restrictXP(player, skill, level)
@@ -1159,7 +1163,9 @@ local function restrictXP(player, skill, level)
 			if notValid(prof,skill) then
 				if nuevoRestricted == true then
 					nuevoRestricted = false;
-					player:getXp():AddXP(skill,level*-1);
+					-- Esto hay que cambiarlo en función de los boost que aplica el juego por defecto.
+					-- el problema es que tengo de decompilar el java y lleva tiempo. Para la siguiente iteración.
+					player:getXp():AddXP(skill,level*-1); 
 				else
 					nuevoRestricted=true;
 				end
