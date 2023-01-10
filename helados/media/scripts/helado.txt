@@ -1,0 +1,48 @@
+module HeladosBow {
+    imports {
+        Base
+    }
+    recipe Hacer Helados Chocolate
+	{
+	  Milk,
+	  Sugar,
+	  Chocolate,
+	  keep Spoon,
+	  keep IceCubes,
+	  
+	  
+	  Result:Base.Icecream=2,
+	  Time:50.0,
+	  OnGiveXP:Recipe.OnGiveXP.Cooking10,
+	  Category:Cooking,
+	}
+	recipe Hacer Helados Fresa
+	{
+	  Milk,
+	  Sugar,
+	  Strewberrie,
+	  keep Spoon,
+	  keep IceCubes,
+	  
+	  
+	  Result:Base.Icecream=2,
+	  Time:50.0,
+	  OnGiveXP:Recipe.OnGiveXP.Cooking10,
+	  Category:Cooking,
+	}
+	
+	recipe Hacer Helados Café
+	{
+	  Milk,
+	  Sugar,
+	  Coffee2,
+	  keep Spoon,
+	  keep IceCubes,
+	  
+	  
+	  Result:Base.Icecream=2,
+	  Time:50.0,
+	  OnGiveXP:Recipe.OnGiveXP.Cooking10,
+	  Category:Cooking,
+	}
+}

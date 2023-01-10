@@ -957,10 +957,10 @@ local function getBoost(prof, inv)
 		return _boost
 	end
 	if prof == "fireofficer" then
-		if inv.contains("Trousers_Fireman") then
+		if inv:contains("Trousers_Fireman") then
 			_boost=_boost + 5
 		end
-		if inv.contains("Hat_Fireman") then
+		if inv:contains("Hat_Fireman") then
 			_boost=_boost + 5
 		end
 		return _boost

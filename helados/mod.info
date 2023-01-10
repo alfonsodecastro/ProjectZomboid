@@ -1,5 +1,5 @@
-name=Helados para todos
-poster=helados.png
-id=Helados
-description=Receta para hacer helados
-url=https://github.com/alfonsodecastro/ProjectZomboid
+name=Receta de helado
+poster=poster.png
+id=recetaHelado
+description=Receta para hacer helado cuando todo esté perdido
+url=WIP
