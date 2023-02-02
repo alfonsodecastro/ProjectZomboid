@@ -553,9 +553,6 @@ local function notValid(prof, skill)
 		if skill== Perks.Doctor then
 			notvalid=true;
 		end
-		if skill== Perks.Electricity then
-			notvalid=true;
-		end
 		if skill== Perks.Farming then
 			notvalid=true;
 		end
