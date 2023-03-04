@@ -3,950 +3,1045 @@ RestrictedXP = RestrictedXP or {}
 nuevoRestricted=true;
 nuevoBoost=true;
 
+print("RestrictedXP V0.6");
+
 local function notValid(prof, skill)
-	local notvalid = false
 	
 	if prof == "unemployed" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
+		if skill== Perks.Blacksmith then	
+			return true
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.Cooking then	
+			return false
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Electricity then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
+		end
+		if skill== Perks.PlantScavenging then
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return false
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "fireofficer" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
+		if skill== Perks.Blacksmith then	
+			return true
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Electricity then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
+		end
+		if skill== Perks.PlantScavenging then
+			return false
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "policeofficer" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
+		if skill== Perks.LGRHunting then
+			return false
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.AMReloading then
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Electricity then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "parkranger" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
-		end
-		if skill== Perks.Cooking then
-			notvalid=true;
-		end
-		if skill== Perks.Doctor then
-			notvalid=true;
-		end
-		if skill== Perks.Electricity then
-			notvalid=true;
-		end
-		if skill== Perks.Farming then
-			notvalid=true;
-		end
-		if skill== Perks.Mechanics then
-			notvalid=true;
-		end
-		if skill== Perks.MetalWelding then
-			notvalid=true;
-		end
-		if skill== Perks.Tailoring then
-			notvalid=true;
-		end
-		if skill== Perks.Woodwork then
-			notvalid=true;
-		end
-		if skill== Perks.AMReloading then
-			notvalid=true;
-		end
-		return notvalid
-	end
-	if prof == "constructionworker" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
-		end
-		if skill== Perks.Cooking then
-			notvalid=true;
-		end
-		if skill== Perks.Doctor then
-			notvalid=false;
-		end
-		if skill== Perks.Electricity then
-			notvalid=true;
-		end
-		if skill== Perks.Farming then
-			notvalid=true;
-		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return false
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
-		end
-		if skill== Perks.Mechanics then
-			notvalid=true;
-		end
-		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return false
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
-		end
-		if skill== Perks.Tailoring then
-			notvalid=true;
+			return false
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
+		end
+		if skill== Perks.Doctor then
+			return true
+		end
+		if skill== Perks.Electricity then
+			return true
+		end
+		if skill== Perks.Farming then
+			return true
+		end
+		if skill== Perks.Mechanics then
+			return true
+		end
+		if skill== Perks.MetalWelding then
+			return true
+		end
+		if skill== Perks.Tailoring then
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
+	end
+	if prof == "constructionworker" then
+		if skill== Perks.Woodwork then
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
+		end
+		if skill== Perks.Doctor then
+			return true
+		end
+		if skill== Perks.Electricity then
+			return true
+		end
+		if skill== Perks.Farming then
+			return true
+		end
+		if skill== Perks.Fishing then
+			return true
+		end
+		if skill== Perks.LGRHunting then
+			return true
+		end
+		if skill== Perks.Mechanics then
+			return true
+		end
+		if skill== Perks.MetalWelding then
+			return true
+		end
+		if skill== Perks.PlantScavenging then
+			return true
+		end
+		if skill== Perks.Tailoring then
+			return true
+		end
+		if skill== Perks.Trapping then
+			return true
+		end
+		if skill== Perks.AMReloading then
+			return true
+		end
+		return false
 	end
 	if prof == "securityguard" then
 		if skill== Perks.Blacksmith then
-			notvalid=true;
+			return true
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Electricity then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "carpenter" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
+		if skill== Perks.Woodwork then
+			return false
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Electricity then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "burglar" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
-		end
-		if skill== Perks.Cooking then
-			notvalid=true;
-		end
-		if skill== Perks.Doctor then
-			notvalid=true;
-		end
-		if skill== Perks.Farming then
-			notvalid=true;
-		end
-		if skill== Perks.Fishing then
-			notvalid=true;
-		end
-		if skill== Perks.LGRHunting then
-			notvalid=true;
-		end
-		if skill== Perks.Mechanics then
-			notvalid=true;
-		end
-		if skill== Perks.MetalWelding then
-			notvalid=true;
+		if skill== Perks.Electricity then
+			return false
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
+		end
+		if skill== Perks.Doctor then
+			return true
+		end
+		if skill== Perks.Farming then
+			return true
+		end
+		if skill== Perks.Fishing then
+			return true
+		end
+		if skill== Perks.LGRHunting then
+			return true
+		end
+		if skill== Perks.Mechanics then
+			return true
+		end
+		if skill== Perks.MetalWelding then
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "chef" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
-		end
-		if skill== Perks.Doctor then
-			notvalid=true;
-		end
-		if skill== Perks.Electricity then
-			notvalid=true;
-		end
-		if skill== Perks.Farming then
-			notvalid=true;
-		end
-		if skill== Perks.Fishing then
-			notvalid=true;
+		if skill== Perks.Cooking then
+			return false
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
-		end
-		if skill== Perks.Mechanics then
-			notvalid=true;
-		end
-		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return false
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Doctor then
+			return true
+		end
+		if skill== Perks.Electricity then
+			return true
+		end
+		if skill== Perks.Farming then
+			return true
+		end
+		if skill== Perks.Fishing then
+			return true
+		end
+		if skill== Perks.Mechanics then
+			return true
+		end
+		if skill== Perks.MetalWelding then
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "repairman" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
-		end
-		if skill== Perks.Cooking then
-			notvalid=true;
-		end
-		if skill== Perks.Doctor then
-			notvalid=true;
-		end
 		if skill== Perks.Electricity then
-			notvalid=true;
-		end
-		if skill== Perks.Farming then
-			notvalid=true;
-		end
-		if skill== Perks.Fishing then
-			notvalid=true;
-		end
-		if skill== Perks.LGRHunting then
-			notvalid=true;
-		end
-		if skill== Perks.Mechanics then
-			notvalid=true;
+			return false
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return false
+		end
+		if skill== Perks.Woodwork then
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
+		end
+		if skill== Perks.Doctor then
+			return true
+		end
+		if skill== Perks.Farming then
+			return true
+		end
+		if skill== Perks.Fishing then
+			return true
+		end
+		if skill== Perks.LGRHunting then
+			return true
+		end
+		if skill== Perks.Mechanics then
+			return true
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "farmer" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
+		if skill== Perks.Farming then
+			return false
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.PlantScavenging then
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Electricity then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "fisherman" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
-		end
-		if skill== Perks.Cooking then
-			notvalid=true;
-		end
-		if skill== Perks.Doctor then
-			notvalid=true;
-		end
-		if skill== Perks.Electricity then
-			notvalid=true;
-		end
-		if skill== Perks.Farming then
-			notvalid=true;
-		end
-		if skill== Perks.LGRHunting then
-			notvalid=true;
-		end
-		if skill== Perks.Mechanics then
-			notvalid=true;
-		end
-		if skill== Perks.MetalWelding then
-			notvalid=true;
+		if skill== Perks.Fishing then
+			return false
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return false
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
+		end
+		if skill== Perks.Doctor then
+			return true
+		end
+		if skill== Perks.Electricity then
+			return true
+		end
+		if skill== Perks.Farming then
+			return true
+		end
+		if skill== Perks.LGRHunting then
+			return true
+		end
+		if skill== Perks.Mechanics then
+			return true
+		end
+		if skill== Perks.MetalWelding then
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "doctor" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
-		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.Doctor then
+			return false
 		end
 		if skill== Perks.Electricity then
-			notvalid=true;
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "veteran" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
+		if skill== Perks.LGRHunting then
+			return false
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.AMReloading then
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
+		end
+		if skill== Perks.Electricity then
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
+		end
+		if skill== Perks.PlantScavenging then
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "nurse" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
-		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.Doctor then
+			return false
 		end
 		if skill== Perks.Electricity then
-			notvalid=true;
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "lumberjack" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
+		if skill== Perks.PlantScavenging then
+			return false
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Electricity then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
+		end
+		if skill== Perks.Woodwork then
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "fitnessInstructor" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
+		if skill== Perks.Blacksmith then	
+			return true
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Electricity then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "burgerflipper" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
-		end
-		if skill== Perks.Doctor then
-			notvalid=true;
-		end
-		if skill== Perks.Electricity then
-			notvalid=true;
-		end
-		if skill== Perks.Farming then
-			notvalid=true;
-		end
-		if skill== Perks.Fishing then
-			notvalid=true;
+		if skill== Perks.Cooking then
+			return false
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
-		end
-		if skill== Perks.Mechanics then
-			notvalid=true;
-		end
-		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return false
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Doctor then
+			return true
+		end
+		if skill== Perks.Electricity then
+			return true
+		end
+		if skill== Perks.Farming then
+			return true
+		end
+		if skill== Perks.Fishing then
+			return true
+		end
+		if skill== Perks.Mechanics then
+			return true
+		end
+		if skill== Perks.MetalWelding then
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "electrician" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
+		if skill== Perks.Electricity then
+			return false
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.AMReloading then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "engineer" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
+		if skill== Perks.Electricity then
+			return false
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.AMReloading then
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		return false
 	end
 	if prof == "metalworker" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
+		if skill== Perks.MetalWelding then
+			return false
 		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.Blacksmith then	
+			return true
 		end
-		if skill== Perks.Doctor then
-			notvalid=true;
-		end
-		if skill== Perks.Electricity then
-			notvalid=true;
-		end
-		if skill== Perks.Farming then
-			notvalid=true;
-		end
-		if skill== Perks.Fishing then
-			notvalid=true;
-		end
-		if skill== Perks.LGRHunting then
-			notvalid=true;
-		end
-		if skill== Perks.PlantScavenging then
-			notvalid=true;
-		end
-		if skill== Perks.Tailoring then
-			notvalid=true;
-		end
-		if skill== Perks.Trapping then
-			notvalid=true;
-		end
-		if skill== Perks.Woodwork then
-			notvalid=true;
-		end
-		if skill== Perks.AMReloading then
-			notvalid=true;
-		end
-		return notvalid
-	end
-	if prof == "mechanics" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
-		end
-		if skill== Perks.Cooking then
-			notvalid=true;
+		if skill== Perks.Cooking then	
+			return true
 		end
 		if skill== Perks.Doctor then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Electricity then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Farming then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Fishing then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.LGRHunting then
-			notvalid=true;
-		end
-		if skill== Perks.PlantScavenging then
-			notvalid=true;
-		end
-		if skill== Perks.Tailoring then
-			notvalid=true;
-		end
-		if skill== Perks.Trapping then
-			notvalid=true;
-		end
-		if skill== Perks.Woodwork then
-			notvalid=true;
-		end
-		if skill== Perks.AMReloading then
-			notvalid=true;
-		end
-		return notvalid
-	end
-	if prof == "ammospecialist" then
-		if skill== Perks.Blacksmith then
-			notvalid=true;
-		end
-		if skill== Perks.Cooking then
-			notvalid=true;
-		end
-		if skill== Perks.Doctor then
-			notvalid=true;
-		end
-		if skill== Perks.Electricity then
-			notvalid=true;
-		end
-		if skill== Perks.Farming then
-			notvalid=true;
-		end
-		if skill== Perks.Fishing then
-			notvalid=true;
-		end
-		if skill== Perks.LGRHunting then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Mechanics then
-			notvalid=true;
-		end
-		if skill== Perks.MetalWelding then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.PlantScavenging then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Tailoring then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Trapping then
-			notvalid=true;
+			return true
 		end
 		if skill== Perks.Woodwork then
-			notvalid=true;
+			return true
 		end
-		return notvalid
+		if skill== Perks.AMReloading then
+			return true
+		end
+		return false
 	end
-	-- Profesión desconocida, por defecto vale para todo o no sube en nada
-	return false
+	if prof == "mechanics" then
+		if skill== Perks.Electricity then
+			return false
+		end
+		if skill== Perks.Mechanics then
+			return false
+		end
+		if skill== Perks.MetalWelding then
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
+		end
+		if skill== Perks.Doctor then
+			return true
+		end
+		if skill== Perks.Farming then
+			return true
+		end
+		if skill== Perks.Fishing then
+			return true
+		end
+		if skill== Perks.LGRHunting then
+			return true
+		end
+		if skill== Perks.PlantScavenging then
+			return true
+		end
+		if skill== Perks.Tailoring then
+			return true
+		end
+		if skill== Perks.Trapping then
+			return true
+		end
+		if skill== Perks.Woodwork then
+			return true
+		end
+		if skill== Perks.AMReloading then
+			return true
+		end
+		return false
+	end
+	if prof == "ammospecialist" then
+		if skill== Perks.AMReloading then
+			return false
+		end
+		if skill== Perks.Blacksmith then	
+			return true
+		end
+		if skill== Perks.Cooking then	
+			return true
+		end
+		if skill== Perks.Doctor then
+			return true
+		end
+		if skill== Perks.Electricity then
+			return true
+		end
+		if skill== Perks.Farming then
+			return true
+		end
+		if skill== Perks.Fishing then
+			return true
+		end
+		if skill== Perks.LGRHunting then
+			return true
+		end
+		if skill== Perks.Mechanics then
+			return true
+		end
+		if skill== Perks.MetalWelding then
+			return true
+		end
+		if skill== Perks.PlantScavenging then
+			return true
+		end
+		if skill== Perks.Tailoring then
+			return true
+		end
+		if skill== Perks.Trapping then
+			return true
+		end
+		if skill== Perks.Woodwork then
+			return true
+		end
+		return false
+	end
 end
 
 local function getBoost(prof, inv)
@@ -990,20 +1085,28 @@ local function getBoost(prof, inv)
 		if (inv:contains("Hat_HardHat")) then
 			_boost=_boost + 5
 		end
+		if (inv:contains("Vest_HighViz")) then
+			_boost=_boost + 5
+		end
 		return _boost
 	end
 	if prof == "securityguard" then
 		return _boost	
 	end
 	if prof == "carpenter" then
+		if (inv:contains("Hat_HardHat")) then
+			_boost=_boost + 5
+		end
+		if (inv:contains("Vest_HighViz")) then
+			_boost=_boost + 5
+		end
 		return _boost
 	end
 	if prof == "burglar" then
-		if (inv:contains("Hat_BalaclavaFull") 
-			or inv:contains("Hat_BalaclavaFace") 
-			or inv:contains("Hat_BalaclavaSpyBlue") 
-			or inv:contains("Hat_BalaclavaSpyRed")
-		) then
+		if (inv:contains("Gloves_LeatherGlovesBlack")) then
+			_boost=_boost + 5
+		end
+		if (inv:contains("Shoes_BlackBoots")) then
 			_boost=_boost + 5
 		end
 		return _boost
@@ -1026,14 +1129,31 @@ local function getBoost(prof, inv)
 		) then
 			_boost=_boost + 5
 		end
+		if (inv:contains("Hat_ChefHat") 
+			or inv:contains("Hat_FastFood") 
+			or inv:contains("Hat_FastFood_Spiffo") 
+		) then
+			_boost=_boost + 5
+		end
 		return _boost
 	end
 	if prof == "repairman" then
+		if (inv:contains("Hat_HardHat")) then
+			_boost=_boost + 5
+		end
+		if (inv:contains("Vest_HighViz")) then
+			_boost=_boost + 5
+		end
 		return _boost
 	end
 	if prof == "farmer" then
 		if (inv:contains("Dungarees") 
 			or inv:contains("DungareesWhite")
+		) then
+			_boost=_boost + 5
+		end
+		if (inv:contains("Shoes_Wellies") 
+			or inv:contains("Shoes_BlackBoots")
 		) then
 			_boost=_boost + 5
 		end
@@ -1043,12 +1163,20 @@ local function getBoost(prof, inv)
 		if (inv:contains("Hat_BucketHat")) then
 			_boost=_boost + 5
 		end
+		if (inv:contains("Vest_Hunting_Camo")) then
+			_boost=_boost + 5
+		end
 		return _boost
 	end
 	if prof == "doctor" then
 		if (inv:contains("Jacket_Doctor2") 
 			or inv:contains("Jacket_Doctor3") 
 			or inv:contains("JacketLong_Doctor") 
+		) then
+			_boost=_boost + 5
+		end
+		if (inv:contains("Hat_SurgicalMask_Blue") 
+			or inv:contains("Hat_SurgicalMask_Green") 
 		) then
 			_boost=_boost + 5
 		end
@@ -1062,12 +1190,20 @@ local function getBoost(prof, inv)
 		) then
 			_boost=_boost + 5
 		end
+		if (inv:contains("Jacket_CoatArmy")) then
+			_boost=_boost + 5
+		end
 		return _boost
 	end
 	if prof == "nurse" then
 		if (inv:contains("Jacket_Doctor2") 
 			or inv:contains("Jacket_Doctor3") 
 			or inv:contains("JacketLong_Doctor") 
+		) then
+			_boost=_boost + 5
+		end
+		if (inv:contains("Hat_SurgicalMask_Blue") 
+			or inv:contains("Hat_SurgicalMask_Green") 
 		) then
 			_boost=_boost + 5
 		end
@@ -1079,6 +1215,9 @@ local function getBoost(prof, inv)
 			or inv:contains("Shirt_LumberjackShortRed") 
 			or inv:contains("Shirt_Lumberjack") 
 		) then
+			_boost=_boost + 5
+		end
+		if (inv:contains("Hat_WinterHat")) then
 			_boost=_boost + 5
 		end
 		return _boost
@@ -1118,18 +1257,33 @@ local function getBoost(prof, inv)
 		) then
 			_boost=_boost + 5
 		end
+		if (inv:contains("Hat_ChefHat") 
+			or inv:contains("Hat_FastFood") 
+			or inv:contains("Hat_FastFood_Spiffo") 
+		) then
+			_boost=_boost + 5
+		end
 		return _boost
 	end
 	if prof == "electrician" then
+		if (inv:contains("Gloves_WhiteTINT")) then
+			_boost=_boost + 5
+		end
+		if (inv:contains("Vest_Foreman")) then
+			_boost=_boost + 5
+		end
 		return _boost
 	end
 	if prof == "engineer" then
+		if (inv:contains("Glassess_SafetyGoogles")) then
+			_boost=_boost + 5
+		end
+		if (inv:contains("Vest_Foreman")) then
+			_boost=_boost + 5
+		end
 		return _boost
 	end
 	if prof == "metalworker" then
-		return _boost
-	end
-	if prof == "mechanics" then
 		if (inv:contains("Boilersuit_BigDaddy") 
 			or inv:contains("Boilersuit_GhostbustersVenkman") 
 			or inv:contains("Boilersuit_GhostbustersSpengler") 
@@ -1143,13 +1297,41 @@ local function getBoost(prof, inv)
 		) then
 			_boost=_boost + 5
 		end
+		if (inv:contains("WeldingMask")) then
+			_boost=_boost + 5
+		end
+		return _boost
+	end
+	if prof == "mechanics" then
+		if (inv:contains("Boilersuit_BigDaddy") 
+			or inv:contains("Boilersuit_GhostbustersVenkman")
+			or inv:contains("Boilersuit_GhostbustersSpengler") 
+			or inv:contains("Boilersuit_GhostbustersStantz")
+			or inv:contains("Boilersuit_GhostbustersZeddemore")
+			or inv:contains("Boilersuit_Halloween")
+			or inv:contains("Boilersuit_Yellow")
+			or inv:contains("Boilersuit")
+			or inv:contains("Boilersuit_BlueRed")
+			or inv:contains("Red_LongJohns")
+		) then
+			_boost=_boost + 5
+		end
+		if (inv:contains("Glassess_SafetyGoogles")) then
+			_boost=_boost + 5
+		end
 		return _boost
 	end
 	if prof == "ammospecialist" then
+		if (inv:contains("Gloves_LeatherGlovesBlack")
+			or inv:contains("Gloves_LeatherGloves")
+		) then
+			_boost=_boost + 5
+		end
+		if (inv:contains("Glassess_SafetyGoogles")) then
+			_boost=_boost + 5
+		end
 		return _boost
 	end
-	-- profesión desconocida, no aplicamos boost
-	return 0
 end
 
 local function restrictXP(player, skill, level)
@@ -1160,9 +1342,8 @@ local function restrictXP(player, skill, level)
 			if notValid(prof,skill) then
 				if nuevoRestricted == true then
 					nuevoRestricted = false;
-					-- Esto hay que cambiarlo en función de los boost que aplica el juego por defecto.
-					-- el problema es que tengo de decompilar el java y lleva tiempo. Para la siguiente iteración.
-					player:getXp():AddXP(skill,level*-1); 
+					player:getXp():AddXP(skill,level*-10)
+					player:getXp():setXPToLevel(skill,0)
 				else
 					nuevoRestricted=true;
 				end
@@ -1181,4 +1362,3 @@ local function restrictXP(player, skill, level)
 end
 
 Events.AddXP.Add(restrictXP)
-
