@@ -1,7 +1,7 @@
-name=restrictedXP
-poster=template.png
-id=restrictedXP
+version=1
+title=RestrictedXP
 description=Mod para que los personajes sólo puedan aprender perks relacionados con su profesión.
 description=Por ahora no comprueba los boost que aplica PZ, así que en algunos casos es posible aprender carpintería siendo cocinero, pero todo se andará.
 description=Gracias a Leissar por la idea.
-url=https://github.com/alfonsodecastro/ProjectZomboid
+tags=Role, Roleo,Leissar
+visibility=public

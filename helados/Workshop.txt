@@ -1,6 +1,6 @@
-name=Receta de helado
-poster=poster.png
-id=recetaHelado
+version=0.1
+title=Más recetas de  helados
 description=Receta para hacer helado cuando todo esté perdido.
 description=Otra idea original de Leissar en Erie County.
-url=WIP
+tags=Leissar,Helados,food
+visibility=public

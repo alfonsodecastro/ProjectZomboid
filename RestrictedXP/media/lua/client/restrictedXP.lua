@@ -180,7 +180,7 @@ local function notValid(prof, skill)
 			return true
 		end
 		if skill== Perks.Woodwork then
-			return true
+			return false
 		end
 		if skill== Perks.AMReloading then
 			return true
@@ -399,7 +399,7 @@ local function notValid(prof, skill)
 			return true
 		end
 		if skill== Perks.Tailoring then
-			return true
+			return false
 		end
 		if skill== Perks.Trapping then
 			return true
@@ -441,7 +441,7 @@ local function notValid(prof, skill)
 			return true
 		end
 		if skill== Perks.Mechanics then
-			return true
+			return false
 		end
 		if skill== Perks.PlantScavenging then
 			return true
@@ -477,7 +477,7 @@ local function notValid(prof, skill)
 			return true
 		end
 		if skill== Perks.Fishing then
-			return true
+			return false
 		end
 		if skill== Perks.LGRHunting then
 			return true
@@ -603,7 +603,7 @@ local function notValid(prof, skill)
 			return true
 		end
 		if skill== Perks.Cooking then	
-			return true
+			return false
 		end
 		if skill== Perks.Doctor then
 			return true
@@ -804,7 +804,7 @@ local function notValid(prof, skill)
 			return true
 		end
 		if skill== Perks.Tailoring then
-			return true
+			return false
 		end
 		if skill== Perks.Trapping then
 			return true

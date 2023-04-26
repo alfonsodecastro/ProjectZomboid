@@ -1,0 +1,6 @@
+version=0.1
+title=Hojas y cuadernos
+description=Receta para arrancar hojas de un cuaderno, o crear uno con grapas y hojas.
+description=Otra idea original de Leissar.
+tags=Leissar,Notebook,cuaderno,Hojas
+visibility=public

@@ -1,0 +1,23 @@
+module HojitasBow {
+    imports {
+        Base
+    }
+    recipe Arrancar hojas de un cuaderno
+	{
+	  Notebook,
+
+	  Result:Base.SheetPaper2=10,
+	  Time:10.0,
+	  Category:Literature,
+	}
+	recipe Hacer cuaderno de 10 hojas
+	{
+	  Base.SheetPaper2=10,
+	  Base,Stapler,
+	  destroy Base.Staples,
+	  
+	  Result:Base.Notebook,
+	  Time:25.0,
+	  Category:Literature,
+	}
+}
