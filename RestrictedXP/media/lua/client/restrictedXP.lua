@@ -984,7 +984,7 @@ local function notValid(prof, skill)
 			return true
 		end
 		if skill== Perks.Tailoring then
-			return true
+			return false
 		end
 		if skill== Perks.Trapping then
 			return true
