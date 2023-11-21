@@ -3,7 +3,7 @@ RestrictedXP = RestrictedXP or {}
 nuevoRestricted=true;
 nuevoBoost=true;
 
-print("RestrictedXP V0.6");
+print("RestrictedXP V0.61");
 
 local function notValid(prof, skill)
 	
